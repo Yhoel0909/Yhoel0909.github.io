@@ -1,11 +1,17 @@
-/* Estilos generales */
+/* Estilos generales - UNA SOLA IMAGEN EN TODA LA PÁGINA */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f8fafc;
-    color: #0f172a;
+    /* UNA SOLA IMAGEN CON OVERLAY MÁS CLARO */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url('fondo.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    color: #f8fafc;
     line-height: 1.6;
+    min-height: 100vh;
 }
 
 .container {
@@ -15,19 +21,21 @@ body {
     padding: 20px 0;
 }
 
-/* Encabezado */
+/* Encabezado - MÁS CLARO */
 header {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    color: White;
+    background-color: rgba(0, 0, 0, 0.2);  /* Reducido de 0.4 a 0.2 */
+    color: white;
     padding: 40px 0;
     text-align: center;
-    margin-bottom: 40px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    margin-bottom: 30px;
+    backdrop-filter: blur(5px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 header h1 {
     font-size: 2.5em;
     margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
 }
 
 header p {
@@ -41,14 +49,16 @@ header p {
 main h2 {
     text-align: center;
     font-size: 2em;
-    color: #1e293b;
+    color: white;
     margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
 }
 
 main .subtitle {
     text-align: center;
-    color: #64748b;
+    color: #e2e8f0;
     margin-bottom: 40px;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
 }
 
 /* Grid de laboratorios */
@@ -59,22 +69,24 @@ main .subtitle {
     margin-top: 20px;
 }
 
-/* Tarjetas de laboratorio */
+/* Tarjetas de laboratorio - MÁS CLARAS (menos opacas) */
 .lab-card {
-    background-color: sky blue;
+    background-color: rgba(255, 255, 255, 0.8);  /* Reducido de 0.9 a 0.7 */
     border-radius: 12px;
     padding: 25px;
     text-decoration: none;
-    color: inherit;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    color: #228B22;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
     transition: all 0.3s ease;
-    border: 1px solid #e2e8f0;
+    border: 1px solid rgba(255, 255, 255, 0.3);
     display: block;
+    backdrop-filter: blur(5px);
 }
 
 .lab-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 12px 20px rgba(0,0,0,0.1);
+    box-shadow: 0 12px 20px rgba(0,0,0,0.3);
+    background-color: rgba(255, 255, 255, 0.8);  /* Hover más opaco pero aún claro */
     border-color: #667eea;
 }
 
@@ -86,26 +98,29 @@ main .subtitle {
 }
 
 .lab-card p {
-    color: #475569;
+    color: #228B22;
     margin-bottom: 15px;
     font-size: 0.95em;
 }
 
 .lab-card .tag {
     display: inline-block;
-    background-color: #e0f2fe;
-    color: #0369a1;
+    background-color: rgba(102, 126, 234, 0.3);
+    color: #228B22;
     padding: 4px 12px;
     border-radius: 20px;
     font-size: 0.85em;
     font-weight: 500;
+    backdrop-filter: blur(2px);
 }
 
-/* Pie de página */
+/* Pie de página - MÁS CLARO */
 footer {
-    background-color: #1e293b;
+    background-color: rgba(0, 0, 0, 0.3);  /* Reducido de 0.5 a 0.3 */
     color: white;
     text-align: center;
     padding: 20px 0;
     margin-top: 60px;
+    backdrop-filter: blur(5px);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
